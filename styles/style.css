@@ -1,0 +1,51 @@
+body{
+    width: 100%;
+    margin: 0;
+    background: #674796;
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-size: 36px;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: wrap;
+}
+
+.title{
+    font-family: 'Prompt';
+    font-size: 72px;
+}
+
+.container_button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 327px;
+    height: 84px;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.button_background{
+    background: #A27BD5;
+}
+
+.button_border{
+    border : solid 3px #A27BD5;
+}
+
+/* Signup */
+
+.container_form{
+    width: 587;
+    height: 365;
+    border-radius: 20px;
+    background: #ffffff;
+}
