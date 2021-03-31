@@ -14,8 +14,8 @@ if(isset($_POST['submit']))
           $select_stmt=$conn->prepare("SELECT email FROM users WHERE email=:email");
           $select_stmt->execute(array(':email'=>$email));
           $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
-
-          if ($row["email"==$email])
+            
+          if ($row['email'==$email])
           {
               echo "désolé cet email est déjà utilisé";
           }
@@ -26,6 +26,7 @@ if(isset($_POST['submit']))
                   ':password' =>$password,
               ))){
                  echo "Vous avez bien été enregisté";
+                
             }
           }
         }
