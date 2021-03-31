@@ -1,6 +1,6 @@
 <?php
 
-require_once('connection.php');
+require_once('db.php');
  
 if(isset($_POST['submit']))
 {
@@ -8,25 +8,23 @@ if(isset($_POST['submit']))
     {
         $email = trim($_POST['email']);
         $password = trim($_POST['password']);
-
       try
       {
           $select_stmt=$conn->prepare("SELECT email FROM users WHERE email=:email");
           $select_stmt->execute(array(':email'=>$email));
           $row=$select_stmt->fetch(PDO::FETCH_ASSOC);
             
-          if ($row['email'==$email])
+          if ($row['email']==$email)
           {
               echo "désolé cet email est déjà utilisé";
           }
           else{
-              $insert_stmt=$conn->prepare("INSERT INTO users (email,password) VALUES (:email, :password)");
+              $insert_stmt=$conn->prepare("INSERT INTO users (email, password) VALUES (:email, :password)");
               if ($insert_stmt->execute(array(
                   ':email' =>$email,
-                  ':password' =>$password,
+                  ':password' =>$password
               ))){
                  echo "Vous avez bien été enregisté";
-                
             }
           }
         }
@@ -49,7 +47,19 @@ if(isset($_POST['submit']))
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-        <?php include 'header.php' ?>
+    <!--Header-->
+	<header class="header">
+        <a href="#" class="logo">
+            <img src="../../images/logo.svg" alt="Website logo">
+            <span>Shortner'Up</span>
+        </a>
+        <div class="header-buttons">
+			<!--Connexion link-->
+            <a href="#Se connecter" class="signup-button">Se connecter</a>
+			<!--Registrer link-->
+            <a href="#Inscription" class="signin-button">S'inscrire</a>
+        </div>
+    </header>
     <div>
         <h2>Inscription</h2>
         <form  class="container_form"action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">

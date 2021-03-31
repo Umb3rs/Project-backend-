@@ -2,6 +2,8 @@
 
 require_once('connection.php');
 
+session_start();
+
 if(isset($_POST["submit"]))  
     { 
 
@@ -11,27 +13,30 @@ if(isset($_POST["submit"]))
         $password = trim($_POST['password']);
         try{
 
-            $select_stmt=$conn->prepare("SELECT email, password FROM users WHERE email=:email AND password=:password");
-            $select_stmt->bindParam(":email", $email);
-            $select_stmt->bindParam(":password", $password);
-            $select_stmt->execute();
+            $stmt=$conn->prepare("SELECT email, password FROM users WHERE email=:email AND password=:password");
+            $stmt->bindParam(":email", $email);
+            $stmt->bindParam(":password", $password);
+            $stmt->execute();
 
-            while($row=$select_stmt->fetch(PDO::FETCH_ASSOC)){
-                $resultemail = $row['email'];
-                $resultpassword = $row['password'];
+            while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+                $resultEmail = $row['email'];
+                $resultPassword = $row['password'];
+
+                if ($email == $resultEmail && $password == $resultPassword)
+                {    
+                    $stmt=$conn->prepare("SELECT userID FROM users where email =:email");
+                    $stmt->bindParam(":email", $email);
+                    $stmt->execute();
+                    $userID = $stmt->fetch(PDO::FETCH_ASSOC);
+                    setcookie('userID', $userID["userID"]);
+
+                    echo 'bienvenue';
+                    header("location: index.php");
+                }
             }
-
-            if ($email == $resultemail && $password == $resultpassword)
-            {
-                
-                echo 'bienvenue';
-                header("location:accueil_login.php");
-            } 
-            else{
-                
-            }   
+            echo 'Login incorrect';
         }
-         catch (PDOException $e ) {
+         catch (PDOException $e) {
             echo $e->getMessage();
           }
         }
@@ -43,13 +48,26 @@ if(isset($_POST["submit"]))
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../main.css">
     <title>Login page</title>
     
 </head>
 <body>
+    <!--Header-->
+	<header class="header">
+        <a href="#" class="logo">
+            <img src="../../images/logo.svg" alt="Website logo">
+            <span>Shortner'Up</span>
+        </a>
+        <div class="header-buttons">
+			<!--Connexion link-->
+            <a href="#Se connecter" class="signup-button">Se connecter</a>
+			<!--Registrer link-->
+            <a href="#Inscription" class="signin-button">S'inscrire</a>
+        </div>
+    </header>
     <div>
-        <?php include 'header.php' ?>
-
         <h2>Connexion</h2>
         <form action="" method="post">
             <div class="">

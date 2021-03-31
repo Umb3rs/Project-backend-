@@ -20,15 +20,15 @@ body{
 
 .container_button{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .button{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 327px;
-    height: 84px;
+    width: 248px;
+    height: 64px;
     color: #ffffff;
     border-radius: 20px;
 }
@@ -44,8 +44,8 @@ body{
 /* Signup */
 
 .container_form{
-    width: 587;
-    height: 365;
+    width: 587px;
+    height: 365px;
     border-radius: 20px;
     background: #ffffff;
 }
