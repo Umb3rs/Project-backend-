@@ -90,6 +90,11 @@ if(isset($_POST["submit"]))
             </div>
              
         </form>
-    </div>    
+    </div> 
+    <!--Footer-->
+	<footer class="footer">
+        <span>Made with &#x1F90D; by H2G2</span>
+        <span>&#x1F98A; Audrey Pont – &#x1F428; Paul Gasselin – &#x1F984; Théo Sciancalepore</span>
+    </footer>   
 </body>
 </html>

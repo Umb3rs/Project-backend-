@@ -95,7 +95,7 @@
 						//If "status" column == 1 => get us to the original link when the shortlink is clicked
 						if($url['status']==1)
 						{
-							echo 'http://localhost/getOrigin?link='.$url['uniqID'];
+							echo 'http://localhost/url_shortener/getOrigin?link='.$url['uniqID'];
 						}
 						//Elseif "status" column == 0 => get us to the "disabled link - 404" page
 						elseif($url['status']==0)
@@ -105,7 +105,7 @@
 					?>
 					>
 						<!-- Display the shortlink in page, deactivated or not.-->
-						http://localhost/getOrigin?link=<?= $url['uniqID']; ?> 
+						http://localhost/url_shortener/getOrigin?link=<?= $url['uniqID']; ?> 
 					</a>
 				</td>
 
