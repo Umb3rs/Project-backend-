@@ -4,7 +4,7 @@
 	$user = "root";
 	$password = "";
 	$host = "localhost";
-	$db = "rculr";
+	$db = "url_short";
 	try {
 		$conn = new PDO('mysql:host='.$host.';dbname='.$db.';charset=utf8', $user, $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -12,4 +12,4 @@
 		echo "Connection à la BDD impossible : ", $e->getMessage();
 		die();
 	  }
-
+?>
