@@ -46,8 +46,7 @@ if(isset($_POST['submit']))
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -55,14 +54,14 @@ if(isset($_POST['submit']))
     <!--Header-->
 	<header class="header">
         <a href="homepage.php" class="logo">
-            <img src="../../images/logo.svg" alt="Website logo">
+            <img src="images/logo.svg" alt="Website logo">
             <span>Shortner'Up</span>
         </a>
         <div class="header-buttons">
 			<!--Connexion link-->
             <a href="login.php" class="signup-button">Se connecter</a>
 			<!--Registrer link-->
-            <a href="singup.php" class="signin-button">S'inscrire</a>
+            <a href="signup.php" class="signin-button">S'inscrire</a>
         </div>
     </header>
     <div>
@@ -71,18 +70,15 @@ if(isset($_POST['submit']))
         <form  class="form_login"action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <div class="labelContainer">
                 <label>Username Or Email</label>
-                <input type="text" name="email" value="">
+                <input type="text" name="email" value="" placeholder="Nom d'utilisateur">
             </div>     
             <div class="labelContainer">
                 <label>Password</label>
-                <input type="password" name="password" class="" value="">
+                <input type="password" name="password" class="" value="" placeholder="Mot de passe"> 
             </div>
             <div class="">
-                <input class="submit_button" type="submit" name="submit" value="Se connecter">
+                <input class="submit_button" type="submit" name="submit" value="s'inscrire">
                 </div>
-                <div class="header-buttons">
-                <a href="login.php" class=" signin-button">Login</a>
-            </div>
         </form>
     </div>    
 </body>

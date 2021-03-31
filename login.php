@@ -51,7 +51,7 @@ if(isset($_POST["submit"]))
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Roboto&display=swap" rel="stylesheet">
     <title>Login page</title>
     
@@ -60,7 +60,7 @@ if(isset($_POST["submit"]))
     <!--Header-->
 	<header class="header">
         <a href="homepage.php" class="logo">
-            <img src="../../images/logo.svg" alt="Website logo">
+            <img src="images/logo.svg" alt="Website logo">
             <span>Shortner'Up</span>
         </a>
         <div class="header-buttons">
