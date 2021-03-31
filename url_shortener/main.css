@@ -1,0 +1,313 @@
+/**********************
+    GLOBAL STYLING
+**********************/
+:root
+{
+--main-bg-color: #674796;
+--complement-bg-color: #FCFCFC;
+--button-color: #A27BD5;
+--button-pushed-color: #4B1F87;
+--cta-color: #EFC57E;
+--cta-pushed-color: #E7A32F;
+}
+
+html, body
+{	
+    height: 100%;
+}
+
+body
+{
+	position: relative;
+	margin: 0 auto;
+    min-height: 100%;
+    width: 100%;
+    font-size: 18px;
+    font-family: sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+/**********************
+    HEADER STYLING
+**********************/
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--complement-bg-color);
+    padding: 10px;
+    margin-bottom: 5%;
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.50));
+}
+  
+/* Style the header links */
+.header a
+{
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 5px;
+}
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: 'Prompt', sans-serif;
+}
+
+.logo img
+{
+  width: 50px;
+  margin-right: 20px;
+}
+
+.header-buttons
+{
+  margin-right: 20px;
+}
+
+/* Change the background color on mouse-over */
+.header-buttons a:hover
+{
+  background-color: var(--button-pushed-color);
+  color: var(--complement-bg-color);
+  filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.10));
+}
+
+.header-buttons > .signup-button
+{
+  background-color: var(--button-color);
+  color: var(--complement-bg-color);
+}
+
+.header-buttons > .signin-button
+{
+  background-color: var(--cta-color);
+  color: #000000;
+}
+
+/**********************
+   CONTAINER STYLING
+**********************/
+
+/**********************
+		 FORM
+**********************/
+.form {
+	display: flex;
+	justify-content: center;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.form form {
+	display: flex;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	width: 100%;
+	max-width: 420px;
+}
+
+.form form input[type="text"] {
+	padding: 14px 20px;
+	font-size: 16px;
+	border: none;
+	background-color: var(--complement-bg-color);
+	border-radius: 8px 0px 0px 8px;
+	width: 100%;
+	color: var(--button-pushed-color)
+}
+
+.form form input[type="submit"] {
+	padding: 14px 20px;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+	background-color: var(--button-color);
+	color: var(--complement-bg-color);
+	font-weight: 700;
+	border-radius: 0px 8px 8px 0px;
+}
+
+/**********************
+		 URLS
+**********************/
+
+.urls
+{
+	width: 80%;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	margin: 0 auto;
+	padding: 20px 16px;
+	background-color: var(--complement-bg-color);
+	border-radius: 20px;
+}
+
+.urls .url
+{
+	border: 1px solid #000000;
+}
+
+.urls .url .id{
+	text-align: center;
+	padding: 16px 16px;
+	color: #666666;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.urls .url a{
+	text-decoration: none;
+	color: var(--button-color)
+}
+
+.urls .url .short_url_header{
+	text-align: center;
+}
+
+.urls .url .short_url{
+	text-align: justify;
+	padding: 16px 16px;
+	color: #666666;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.urls .url .long_url_header{
+	text-align: center;
+}
+
+.urls .url .long_url{
+	text-align: justify;
+	max-width: 400px;
+	padding: 16px 16px;
+	margin-left: 25px;
+	color: #666666;
+	font-size: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+.urls .url .long_url a{
+	color: #aaaaaa;
+}
+
+.clicks
+{
+	text-align: center;
+	padding: 16px 24px;
+}
+
+.status
+{
+	margin: 24px;
+	text-align: center;
+	color: #000000;
+	font-size: 14px;
+}
+
+.status div
+{
+	padding: 8px;
+}
+
+.status .active, .status .inactive
+{
+	padding: 8px 8px;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+	background-color: var(--button-color);
+	color: var(--complement-bg-color);
+	border-radius: 8px;
+}
+
+.status .active:hover, .status .inactive:hover
+{
+	background-color: var(--button-pushed-color);
+}
+
+.delete .delete
+{
+	margin: 24px;
+	padding: 8px 8px;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+	background-color: #CC0000;
+	color: var(--complement-bg-color);
+	border-radius: 8px;
+}
+
+.delete .delete:hover
+{
+	background-color: #940000;
+}
+/**********************
+    FOOTER STYLING
+**********************/
+.footer
+{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+  	display: flex;
+  	flex-flow: column wrap;
+  	align-items: center;
+  	padding: 100px 0 20px 0;
+  	color: var(--complement-bg-color);
+  	font-size: 12px;
+}
+
+/**********************
+   ERROR 404 STYLING
+**********************/
+.main-content
+{
+	color: var(--complement-bg-color);
+	display: flex;
+	flex-flow: column wrap;
+    justify-content: center;
+	align-items: center;
+}
+.error
+{
+	max-width: 600px;
+	max-height: 400px;
+}
+
+.error-text
+{
+	line-height: 24px;
+}
+
+/**************************
+    ERROR 404 ANIMATION
+**************************/
+/*https://codepen.io/a--w/pen/vOzgjd*/
+.float
+{
+	-webkit-animation-name: Spinning;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes Spinning
+{
+	0%{-webkit-transform: rotate(0deg);}
+	33%{-webkit-transform: rotate(5deg);} 
+	66%{-webkit-transform: rotate(-5deg);} 
+	100%{-webkit-transform: rotate(0deg);}  
+} 
