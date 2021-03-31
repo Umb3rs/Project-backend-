@@ -100,6 +100,19 @@ body
   color: #000000;
 }
 
+.header-buttons .signout-button{
+    background: var(--cta-color);
+	border: solid 3px var(--cta-color);
+	color:#000000;
+	margin-right: 50px;
+}
+
+.header-buttons .signout-button:hover
+{
+	border : solid 3px var(--cta-pushed-color);
+	background-color: var(--cta-pushed-color);
+}
+
 /**********************
    CONTAINER STYLING
 **********************/
@@ -171,8 +184,6 @@ body
   	background-color: var(--button-pushed-color);
   	border : solid 3px var(--button-pushed-color);
 }
-
-
 
 /**********************
 		 FORM
@@ -315,11 +326,11 @@ body
 	font-weight: 700;
 }
 
-.urls .url .long_url_header{
+.urls .url .original_url_header{
 	text-align: center;
 }
 
-.urls .url .long_url{
+.urls .url .original_url{
 	text-align: justify;
 	max-width: 400px;
 	padding: 16px 16px;
@@ -331,7 +342,7 @@ body
 
 }
 
-.urls .url .long_url a{
+.urls .url .original_url a{
 	color: #aaaaaa;
 }
 

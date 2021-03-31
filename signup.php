@@ -20,20 +20,20 @@ if(isset($_POST['submit']))
           //if email matches a data in the database, it requests a new email 
           if ($row['email']==$email)
           {
-              echo "désolé cet email est déjà utilisé";
+              echo "<script>alert(\"Ce nom d'utilisateur est déjà pris !\")</script>";
           }
           //if email is not recognized by the DB, insert the new user into the DB
           else{
               $insert_stmt=$conn->prepare("INSERT INTO users (email, password) VALUES (:email, :password)");
               if ($insert_stmt->execute(array(
                   ':email' =>$email,
-                  ':password' =>$password
-              ))){
-                 echo "Vous avez bien été enregisté";
+                  ':password' =>$password)
+                )){
+                echo "<script>alert(\"Vous avez bien été enregistré !\")</script>";  
             }
           }
         }
-        catch (PDOException $e ) {
+        catch (PDOException $e) {
             echo $e->getMessage();
           }
         }

@@ -2,6 +2,8 @@
 //retrieve data to connect to the database
 require_once('connection.php');
 
+session_start();
+
 //checks that the user has entered data and presses submit
 if(isset($_POST["submit"]))  
     { 

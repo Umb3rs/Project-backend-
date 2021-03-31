@@ -34,7 +34,7 @@
 	}
 	else
 	{
-		header("location: accueil.php");
+		header("location: homepage.php");
 	}
 	
 ?>
@@ -55,9 +55,8 @@
             <span>Shortner'Up</span>
         </a>
         <div class="header-buttons">
-			<!--Connexion link-->
+			<!--Log out Link-->
             <a href="logout.php" class="signout-button">Se déconnecter</a>
-
         </div>
     </header>
 	<!--Main page-->
@@ -65,7 +64,7 @@
 		<!--Submit a link to get it shortened by the add.php-->
 		<section class="form">
 			<form action="addLink.php" method="post">
-				<input type="text" name="long_url" placeholder="e.g. https://example.com" />
+				<input type="text" name="original_url" placeholder="e.g. https://example.com" />
 				<input type="submit" value="SHORTEN"/>
 			</form>
 		</section>
@@ -77,7 +76,7 @@
 			<!--Table labels-->
 			<tr class="url">
 				<th class="short_url_header">Short link</th>
-				<th class="long_url_header">Original link</th>
+				<th class="original_url_header">Original link</th>
 				<th class="clicks_header">Clicks</th>
 				<th class="status_header">Status</th>
 				<th class="delete_header">Delete</th>
@@ -110,8 +109,8 @@
 				</td>
 
 				<!-- Display the original link (clickable)-->
-				<td class="long_url">
-					<a href="<?= $url['long_url']; ?>" target="_blank"><?= $url['long_url']; ?>
+				<td class="original_url">
+					<a href="<?= $url['original_url']; ?>" target="_blank"><?= $url['original_url']; ?>
 					</a>
 				</td>
 
