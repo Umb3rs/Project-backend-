@@ -1,6 +1,6 @@
 <?php
 //retrieve data to connect to the database
-require_once('connection.php');
+require_once('db.php');
 
 session_start();
 
@@ -55,8 +55,7 @@ if(isset($_POST["submit"]))
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Roboto&display=swap" rel="stylesheet">
-    <title>Login page</title>
-    
+    <title>Shortner'Up | Connexion</title>
 </head>
 <body>
     <!--Header-->
@@ -77,18 +76,18 @@ if(isset($_POST["submit"]))
         
         <form class="form_login"action="" method="post">
             <div class="labelContainer">
-                <label>Username Or Email</label>
+                <label>Nom d'utilisateur</label>
                 <input type="text" name="email" placeholder="Nom d'utilisateur">
             </div>    
             <div class="labelContainer">
-                <label>Password</label>
+                <label>Mot de passe</label>
                 <input type="password" name="password" placeholder="Mot de passe">
             </div>
             <div>
                 <input type="submit" name='submit' value="Se connecter">
             </div>
             <div class="header-buttons">
-                <a href="signup.php" class=" signin-button">Inscris-toi ici</a>
+                <a href="signup.php" class=" signin-button">Inscris-toi ici !</a>
             </div>
              
         </form>

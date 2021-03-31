@@ -1,6 +1,6 @@
 <?php
 	//Calling DB in order to get page working
-	require_once('connection.php');
+	require_once('db.php');
 
 	//Get the uniqID displayed after the "link=" in our shortlink url
 	$uniqid = $_GET['link'];
@@ -15,5 +15,5 @@
 	$url = $stmt->fetch(PDO::FETCH_ASSOC);
 
 	//Send us back to the original link
-	header("location: " . $url['long_url']);
+	header("location: " . $url['original_url']);
 ?>

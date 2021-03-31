@@ -3,20 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>PHP URL Shortener</title>
-	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 	<!--Header-->
 	<header class="header">
-        <a href="index.php" class="logo">
+        <a href="homepage.php" class="logo">
             <img src="images/logo.svg" alt="Website logo">
             <span>Shortner'Up</span>
         </a>
         <div class="header-buttons">
 			<!--Connexion link-->
-            <a href="#Se connecter" class="signup-button">Se connecter</a>
+            <a href="signup.php" class="signup-button">Se connecter</a>
 			<!--Registrer link-->
-            <a href="#Inscription" class="signin-button">S'inscrire</a>
+            <a href="login.php" class="signin-button">S'inscrire</a>
         </div>
     </header>
 	<!--Main page-->
@@ -29,9 +30,9 @@
             <path d="M997.688 421.264H962.153V316.624C962.153 311.066 959.945 305.736 956.016 301.806C952.086 297.876 946.755 295.668 941.197 295.668H932.871C930.119 295.668 927.394 296.21 924.852 297.263C922.309 298.317 919.999 299.86 918.053 301.806C916.107 303.752 914.564 306.062 913.51 308.605C912.457 311.147 911.915 313.872 911.915 316.624V421.264H811.685C809.623 421.264 807.596 420.731 805.801 419.716C804.006 418.702 802.503 417.241 801.439 415.475C800.374 413.709 799.785 411.698 799.727 409.637C799.669 407.576 800.144 405.535 801.108 403.712L907.19 202.931C908.512 200.428 909.314 197.683 909.546 194.861C909.779 192.04 909.437 189.2 908.542 186.514C907.646 183.828 906.216 181.352 904.337 179.234C902.458 177.116 900.17 175.401 897.61 174.192L891.347 171.235C886.485 168.939 880.925 168.6 875.82 170.288C870.714 171.976 866.453 175.563 863.918 180.305L734.536 422.338C732.333 426.459 731.181 431.06 731.181 435.734C731.181 443.27 734.174 450.498 739.503 455.827C744.832 461.156 752.06 464.15 759.596 464.15H911.915V530.317C911.915 536.979 914.562 543.368 919.272 548.079C923.983 552.789 930.372 555.436 937.034 555.436V555.436C943.696 555.436 950.085 552.789 954.796 548.079C959.507 543.368 962.153 536.979 962.153 530.317V464.15H997.688C1000.5 464.15 1003.29 463.595 1005.89 462.517C1008.49 461.44 1010.86 459.86 1012.85 457.869C1014.84 455.878 1016.42 453.514 1017.5 450.913C1018.58 448.311 1019.13 445.523 1019.13 442.707V442.707C1019.13 437.02 1016.87 431.565 1012.85 427.544C1008.83 423.523 1003.37 421.264 997.688 421.264V421.264Z" stroke="#3F3D56" stroke-width="4" stroke-miterlimit="10"/>
             <path d="M540.031 155.982C454.087 155.982 392.38 211.121 392.38 339.78C392.38 485.593 454.087 524.19 540.031 524.19C625.975 524.19 691.358 481.917 691.358 339.78C691.358 187.84 625.975 155.982 540.031 155.982ZM540.596 475.79C481.069 475.79 449.97 440.867 449.97 339.874C449.97 250.762 482.342 203.769 541.869 203.769C601.396 203.769 633.768 234.637 633.768 339.874C633.768 438.321 600.123 475.79 540.596 475.79Z" stroke="#3F3D56" stroke-width="4" stroke-miterlimit="10"/>
         </svg>
-        <h1 class="error-text">Uh-oh!</h1>
-        <div class="error-text">This page doesn't seem to exist!</div>
-        <div class="error-text">Your link may be inexistent.</div>
+        <h1 class="error-text">Oh oh!</h1>
+        <div class="error-text">Cette page n'existe pas...</div>
+        <div class="error-text">Votre lien est peut-être désactivé.</div>
 	</main>
 	<!--Footer-->
 	<footer class="footer">

@@ -1,10 +1,9 @@
 
 <?php
-
 	$user = "root";
 	$password = "";
 	$host = "localhost";
-	$db = "url_short";
+	$db = "url_shortener";
 	try {
 		$conn = new PDO('mysql:host='.$host.';dbname='.$db.';charset=utf8', $user, $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

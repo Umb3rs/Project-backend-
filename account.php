@@ -1,6 +1,6 @@
 <?php
 	//Calling DB in order to get page working
-	require_once('connection.php');
+	require_once('db.php');
 
 	//Delete the object with the according ID when the delete button is clicked
 	if(isset($_POST['delete'])){
@@ -27,7 +27,7 @@
 	}
 
 	if(isset($_COOKIE['userID'])){
-		//get to display all objects from DB table "urls"
+		//get to display all objects from DB table "urls" WHERE userID = userID get in the cookie
 		$stmt=$conn->prepare("SELECT * FROM urls WHERE userID =" . $_COOKIE['userID']);
         $stmt->execute();
 		$urls = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -43,7 +43,7 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>PHP URL Shortener</title>
+	<title>Shortner'Up | Compte</title>
 	<link rel="stylesheet" href="main.css"/>
 	<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -61,7 +61,7 @@
     </header>
 	<!--Main page-->
 	<main>
-		<!--Submit a link to get it shortened by the add.php-->
+		<!--Submit a link to get it shortened by the addLink.php-->
 		<section class="form">
 			<form action="addLink.php" method="post">
 				<input type="text" name="original_url" placeholder="e.g. https://example.com" />
@@ -75,11 +75,11 @@
 
 			<!--Table labels-->
 			<tr class="url">
-				<th class="short_url_header">Short link</th>
-				<th class="original_url_header">Original link</th>
-				<th class="clicks_header">Clicks</th>
-				<th class="status_header">Status</th>
-				<th class="delete_header">Delete</th>
+				<th class="short_url_header">Lien court</th>
+				<th class="original_url_header">Lien original</th>
+				<th class="clicks_header">Nombre de clics</th>
+				<th class="status_header">Statut</th>
+				<th class="delete_header">Supprimer le lien</th>
 			</tr>
 
 			<!--Table entries-->

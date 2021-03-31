@@ -1,6 +1,6 @@
 <?php
 //retrieve data to connect to the database
-require_once('connection.php');
+require_once('db.php');
  
 //checks that the user has entered data and presses submit
 if(isset($_POST['submit']))
@@ -45,7 +45,7 @@ if(isset($_POST['submit']))
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <title>Shortner'Up | S'inscrire</title>
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Roboto&display=swap" rel="stylesheet">
@@ -69,16 +69,16 @@ if(isset($_POST['submit']))
          <div class="form_login">
         <form  class="form_login"action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <div class="labelContainer">
-                <label>Username Or Email</label>
+                <label>Nom d'utilisateur</label>
                 <input type="text" name="email" value="" placeholder="Nom d'utilisateur">
             </div>     
             <div class="labelContainer">
-                <label>Password</label>
+                <label>Mot de passe</label>
                 <input type="password" name="password" class="" value="" placeholder="Mot de passe"> 
             </div>
             <div class="">
                 <input class="submit_button" type="submit" name="submit" value="s'inscrire">
-                </div>
+            </div>
         </form>
     </div> 
     <!--Footer-->
